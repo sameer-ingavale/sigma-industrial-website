@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kept intentionally minimal. Reach for Tailwind utility classes directly
+   in components instead of adding new global classes here — it keeps the
+   styling visible at the point of use, which is easier to modify later. */
+
+body {
+	background-color: #ffffff;
+	color: #1a1a1a;
+}
+
+:focus-visible {
+	outline: 2px solid #1c2b45;
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
