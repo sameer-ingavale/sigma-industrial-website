@@ -19,7 +19,7 @@ export default function CategoriesPage() {
 					<p className="text-gray-700 mt-2 max-w-xl">
 						The categories shown are not exhaustive—we also work with
 						requirements outside these areas. Send us the part number, photo,
-						nameplate or equipment details—we’ll take it from there.
+						nameplate or equipment details—we&apos;ll take it from there.
 					</p>
 				</div>
 			</section>

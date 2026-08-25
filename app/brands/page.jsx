@@ -27,9 +27,9 @@ export default function BrandsPage() {
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-10">
 					<h1 className="text-2xl font-semibold text-gray-900">All Brands</h1>
 					<p className="text-gray-700 mt-2 max-w-xl">
-						We source Indian & International OEM brands and screened Indian
+						We source Indian &amp; International OEM brands and screened Indian
 						manufacturers. Not listed? Send us the OEM part number, model number
-						or technical specification—we’ll take it from there.
+						or technical specification—we&apos;ll take it from there.
 					</p>
 				</div>
 			</section>

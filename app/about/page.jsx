@@ -33,7 +33,7 @@ const WHAT_WE_DO = [
 	{
 		icon: FileCheck2,
 		title: "Commercial Clarity",
-		body: "We issue formal techno-cmmercial quotations with the make, specifications, lead time, origin and commercial terms clearly defined.",
+		body: "We issue formal techno-commercial quotations with the make, specifications, lead time, origin and commercial terms clearly defined.",
 	},
 	{
 		icon: PackageCheck,
@@ -210,9 +210,9 @@ export default function AboutPage() {
 							Sameer Ingavale, Founder
 						</p>
 						<p className="text-gray-700 mt-2 leading-relaxed">
-							My focus at Sigma is to make India's fragmented industrial supply
-							base easier for international buyers to access. We bring structure
-							and dependability to the process — from RFQ through export
+							My focus at Sigma is to make India&apos;s fragmented industrial
+							supply base easier for international buyers to access. We bring
+							structure and dependability to the process—from RFQ through export
 							execution.
 						</p>
 					</div>
