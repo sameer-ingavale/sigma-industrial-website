@@ -53,7 +53,7 @@ export default function CountryFlag() {
 
 	return (
 		<img
-			src={`/images/flags/${country.name}.png`}
+			src={`/images/flags/${country.code}.png`}
 			alt={country.name}
 			title={country.name}
 			width={20}

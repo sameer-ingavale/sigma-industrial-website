@@ -17,8 +17,8 @@ export default function StatusBadge({ status }) {
 		<span
 			className={
 				!isMadeToOrder
-					? "inline-block text-xs font-medium uppercase tracking-wide border border-navy text-navy rounded-md px-2.5 py-1"
-					: "inline-block text-xs font-medium uppercase tracking-wide bg-navy text-white rounded-md px-2.5 py-1"
+					? "inline-block text-xs font-medium uppercase tracking-wide border border-navy text-navy rounded-md px-2.5 py-1 pt-1.5"
+					: "inline-block text-xs font-medium uppercase tracking-wide bg-navy text-white rounded-md px-2.5 py-1 pt-1.5"
 			}>
 			{label}
 		</span>

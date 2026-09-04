@@ -4,6 +4,7 @@ import { getCategoryBySlug } from "@/lib/products";
 import { getBrandBySlug } from "@/lib/brands";
 import { assetUrl } from "@/lib/assets";
 import StatusBadge from "./StatusBadge";
+import BlurredPrice from "./BlurredPrice";
 
 // One card per product in catalog grids. Keep this scannable: image,
 // name, one line, a couple of hard facts. No paragraph of copy here —
@@ -41,7 +42,7 @@ export default function ProductCard({ product }) {
 				<p className="text-gray-700 mt-1">{product.application}</p>
 				{product.indicativePrice && (
 					<p className="font-semibold text-navy mt-2">
-						{product.indicativePrice}
+						<BlurredPrice price={product.indicativePrice} />
 					</p>
 				)}
 				<p className="text-xs text-gray-500 mt-3 font-mono">

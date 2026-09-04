@@ -6,7 +6,15 @@ export default function Header() {
 		<header className="border-b border-gray-200 bg-white sticky top-0 z-40">
 			<div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
 				<Link href="/" className="font-semibold text-lg text-navy">
-					Sigma Industrial Solutions
+					{/* 	Sigma Industrial Solutions */}
+					<img
+						src={`/images/sigma-logo.png`}
+						alt="logo"
+						title="logo"
+						width={75}
+						height={50}
+						className="rounded-sm mt-0.5"
+					/>
 				</Link>
 
 				<nav className="flex items-center gap-6 text-sm">

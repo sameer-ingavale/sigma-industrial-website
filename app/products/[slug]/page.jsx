@@ -16,6 +16,7 @@ import ProductCard from "@/components/ProductCard";
 import ShareButtons from "@/components/ShareButtons";
 import StatusBadge from "@/components/StatusBadge";
 import { Download } from "lucide-react";
+import BlurredPrice from "@/components/BlurredPrice";
 
 // Pre-renders one page per product at build time.
 export function generateStaticParams() {
@@ -127,9 +128,9 @@ export default function ProductPage({ params }) {
 
 					{product.indicativePrice && (
 						<p className="mt-3 flex items-end gap-2">
-							<span className="text-sm text-gray-500 mb-0.5">From</span>
+							{/* 	<span className="text-sm text-gray-500 mb-0.5">From</span> */}
 							<span className="text-2xl font-semibold text-navy">
-								{product.indicativePrice}
+								<BlurredPrice price={product.indicativePrice} />
 							</span>
 						</p>
 					)}
@@ -151,7 +152,7 @@ export default function ProductPage({ params }) {
 												target="_blank"
 												rel="noopener noreferrer"
 												className="text-navy hover:underline cursor-pointer">
-												Explore the catalog →
+												Explore the full catalog →
 											</a>
 										) : (
 											<span className="text-gray-500 text-sm">

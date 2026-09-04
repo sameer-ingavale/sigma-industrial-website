@@ -73,7 +73,7 @@ export default function BlogPostPage({ params }) {
 				{/* @tailwindcss/typography styles every element the MDX body
             produces (headings, lists, blockquotes, links) without hand
             styling each one — see tailwind.config.js plugins. */}
-				<div className="prose prose-gray prose-headings:font-semibold prose-a:text-navy max-w-none mt-8">
+				<div className="prose prose-slate prose-headings:font-semibold prose-a:text-navy max-w-none mt-8">
 					<MDXRemote source={post.content} />
 				</div>
 			</div>

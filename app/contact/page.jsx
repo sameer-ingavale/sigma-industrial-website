@@ -42,7 +42,7 @@ export default function ContactPage() {
 
 				{/* A photo of the office or the person answering enquiries — see
             the comment on contactImage in lib/site-config.js. */}
-				<div className="relative aspect-[4/3] w-full bg-gray-50 border border-gray-200 rounded-md overflow-hidden">
+				{/* <div className="relative aspect-[4/3] w-full bg-gray-50 border border-gray-200 rounded-md overflow-hidden">
 					{siteConfig.contactImage ? (
 						<Image
 							src={assetUrl(siteConfig.contactImage)}
@@ -56,7 +56,7 @@ export default function ContactPage() {
 							Photo placeholder — office or team
 						</span>
 					)}
-				</div>
+				</div> */}
 			</div>
 
 			<div className="lg:col-span-2 border border-gray-200 rounded-md p-6">

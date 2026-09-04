@@ -60,19 +60,21 @@ export default function BrandsPage() {
 						</h2>
 						<Link
 							href={`/brands/${verified.slug}`}
-							className="relative block w-full h-32 bg-gray-50 border border-gray-200 rounded-md overflow-hidden hover:border-navy transition-colors cursor-pointer">
+							className="relative block w-full h-32 border border-gray-200 rounded-md overflow-hidden hover:border-navy transition-colors cursor-pointer">
 							{siteConfig.sigmaVerifiedBanner ? (
 								<Image
 									src={assetUrl(siteConfig.sigmaVerifiedBanner)}
 									alt="Sigma Verified Manufacturers"
-									fill
-									sizes="100vw"
-									className="object-cover"
+									width={300}
+									height={100}
+									/* fill */
+									/* sizes="100vw" */
+									/* 	className="object-cover" */
 								/>
 							) : (
 								<span className="absolute inset-0 flex items-center justify-center text-xs text-gray-400 text-center px-6">
-									Banner placeholder — full width, same height as the tiles
-									above
+									{/* Banner placeholder — full width, same height as the tiles
+									above */}
 								</span>
 							)}
 						</Link>
