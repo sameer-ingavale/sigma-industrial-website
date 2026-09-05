@@ -224,8 +224,8 @@ export default function ProductPage({ params }) {
 
 			{/* Form column widened slightly (3/7 instead of 2/5) so the fields
           don't feel cramped. */}
-			<div className="mx-auto max-w-6xl px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-9 gap-10 pb-16 border-t border-gray-200 pt-10">
-				<div className="lg:col-span-5 space-y-10">
+			<div className="mx-auto max-w-6xl px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-8 gap-10 pb-16 border-t border-gray-200 pt-10">
+				<div className="lg:col-span-4 space-y-10">
 					{/* Specifications — product-specific specs first, then
               Categories, HS code, and Origin at the bottom, in that
               order. Categories are clickable, same treatment as the

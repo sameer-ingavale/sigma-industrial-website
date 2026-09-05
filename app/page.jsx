@@ -122,7 +122,7 @@ export default function HomePage() {
 						icon={FileCheck}
 						n="3"
 						title="We quote"
-						body="A complete techno-commercial offer with lead time."
+						body="a complete techno-commercial offer with lead time."
 					/>
 					<Step
 						icon={Handshake}

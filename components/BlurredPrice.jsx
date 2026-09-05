@@ -29,8 +29,8 @@ export default function BlurredPrice({ price, className = "" }) {
 			</span>
 			<span className="sr-only">Price hidden — send an enquiry to see it</span>
 			<Lock
-				className="w-3 h-3 text-gray-500 flex-shrink-0"
-				strokeWidth={3}
+				className="w-3.5 h-3.5 text-gray-500 flex-shrink-0"
+				strokeWidth={2.5}
 				aria-hidden="true"
 			/>
 			{suffix && <span>{suffix}</span>}
