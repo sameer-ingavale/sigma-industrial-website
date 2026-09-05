@@ -40,7 +40,7 @@ export default function Footer() {
 						</li>
 						<li>
 							<Link href="/about" className="hover:text-white">
-								Company
+								About
 							</Link>
 						</li>
 						<li>

@@ -193,7 +193,7 @@ export default function ProductPage({ params }) {
 							</Link>
 						</Fact>
 						{product.crossReferenceBrands?.length > 0 && (
-							<Fact label="Cross-reference">
+							<Fact label="Alternate Brands">
 								{product.crossReferenceBrands.join(", ")}
 							</Fact>
 						)}
@@ -205,7 +205,7 @@ export default function ProductPage({ params }) {
 						<a
 							href="#enquire"
 							className="bg-accent text-white text-sm px-5 py-2.5 rounded-md hover:bg-accent/90">
-							Request quotation
+							Enquire Now
 						</a>
 						{/* Prefilled with the product page link + a short opener,
                 not a blank chat — and WhatsApp's own deeper brand green,
@@ -215,8 +215,8 @@ export default function ProductPage({ params }) {
 							href={`${siteConfig.whatsappUrl}?text=${encodeURIComponent(`I'm interested in this product: ${product.name} — ${pageUrl}`)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="bg-[#128C7E] text-white text-sm px-5 py-2.5 rounded-md hover:bg-[#128C7E]/90">
-							Request on WhatsApp
+							className="bg-[#26CC66] text-white text-sm px-5 py-2.5 rounded-md hover:bg-[#128C7E]/90">
+							WhatsApp Us
 						</a>
 					</div>
 				</div>
@@ -224,8 +224,8 @@ export default function ProductPage({ params }) {
 
 			{/* Form column widened slightly (3/7 instead of 2/5) so the fields
           don't feel cramped. */}
-			<div className="mx-auto max-w-6xl px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-7 gap-10 pb-16 border-t border-gray-200 pt-10">
-				<div className="lg:col-span-4 space-y-10">
+			<div className="mx-auto max-w-6xl px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-9 gap-10 pb-16 border-t border-gray-200 pt-10">
+				<div className="lg:col-span-5 space-y-10">
 					{/* Specifications — product-specific specs first, then
               Categories, HS code, and Origin at the bottom, in that
               order. Categories are clickable, same treatment as the
@@ -282,7 +282,6 @@ export default function ProductPage({ params }) {
 							</tbody>
 						</table>
 					</div>
-
 					{/* Industries — below Specifications, above Attachments, per
               request. Static tags for now; see the field comment in
               lib/products.js for how to make these clickable later. */}
@@ -302,7 +301,6 @@ export default function ProductPage({ params }) {
 							</div>
 						</div>
 					)}
-
 					{/* Attachments — only shown at all if at least one isn't `false` */}
 					{attachments.length > 0 && (
 						<div>
@@ -317,7 +315,28 @@ export default function ProductPage({ params }) {
 						</div>
 					)}
 
-					{/* FAQs — keep short, or omit the array entirely on a product */}
+					{product.faqs?.length > 0 && (
+						<div>
+							<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
+								Common sourcing questions
+							</h2>
+
+							<div className="divide-y border-y">
+								{product.faqs.map((faq) => (
+									<details key={faq.question} className="group py-4">
+										<summary className="flex items-center justify-between cursor-pointer font-medium text-gray-800 list-none">
+											{faq.question}
+											<span className="font-normal ml-4 text-gray-500 group-open:rotate-45 transition-transform">
+												+
+											</span>
+										</summary>
+										<p className="text-gray-700 mt-3">{faq.answer}</p>
+									</details>
+								))}
+							</div>
+						</div>
+					)}
+
 					{/* 	{product.faqs?.length > 0 && (
 						<div>
 							<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
@@ -336,9 +355,9 @@ export default function ProductPage({ params }) {
 				</div>
 
 				{/* Enquiry form */}
-				<div className="lg:col-span-3 lg:sticky lg:top-24 h-fit border border-gray-200 rounded-md p-6">
+				<div className="lg:col-span-4 lg:top-24 h-fit border border-gray-200 rounded-md p-6">
 					<h2 className="font-semibold text-gray-900 mb-4">
-						Request a quotation
+						Get Pricing & Lead Time
 					</h2>
 					<EnquiryForm productName={product.name} productSlug={product.slug} />
 				</div>
@@ -362,7 +381,7 @@ export default function ProductPage({ params }) {
 
 function Fact({ label, children }) {
 	return (
-		<div className="grid grid-cols-[120px_1fr] gap-3 py-2 border-b border-gray-100">
+		<div className="grid grid-cols-[130px_1fr] gap-3 py-2 border-b border-gray-100">
 			<dt className="text-gray-500">{label}</dt>
 			<dd className="text-gray-900">{children}</dd>
 		</div>

@@ -19,11 +19,6 @@ const FEATURED_CATEGORIES = categories.filter((c) => c.featured).slice(0, 4);
 export default function HomePage() {
 	return (
 		<>
-			{/* Hero — plain statement of what this is, not a tagline. Image
-          placeholder on the right (desktop) / top (mobile) — see
-          lib/site-config.js → heroImage. flex-col-reverse means on
-          mobile the second child (image) renders first visually; lg:flex-row
-          restores normal left-to-right order at desktop width. */}
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 flex flex-col lg:flex-row items-center gap-10">
 					<div className="flex-1 py-14">
@@ -31,24 +26,13 @@ export default function HomePage() {
 							Industrial equipment and spares, sourced in India, shipped
 							worldwide
 						</h1>
-						{/* <p className="text-gray-700 mt-4 max-w-xl">
-							{siteConfig.yearsInExport} years exporting to buyers across FNB,
-							mining, and allied manufacturing industries. Complete material
-							traceability, and guaranteed dispatch timelines.
-						</p> */}
 
 						<p className="text-gray-700 mt-4 max-w-xl">
 							Supplying OEM parts, quality equivalents, and hard-to-source
 							industrial requirements to manufacturing and industrial buyers
 							since 2007
 						</p>
-						{/* <p className="text-gray-700 mt-4 max-w-xl">
-							Send us a nameplate photo, part number, specification or simply
-							the available details. We identify the requirement, source the
-							appropriate option and return a formal quotation with the relevant
-							technical and commercial information.
-						</p>
- */}
+
 						<div className="flex gap-3 mt-8">
 							<Link
 								href="/products"
@@ -63,9 +47,6 @@ export default function HomePage() {
 						</div>
 					</div>
 
-					{/* Intentionally no border/background here — a transparent-PNG
-              cutout is meant to float against the page, not sit in a box.
-              Swap this whole block for an <Image> once you have the photo. */}
 					<div className="w-full max-w-xs lg:max-w-sm lg:flex-1 flex justify-center">
 						{siteConfig.heroImage ? (
 							<Image
@@ -79,7 +60,7 @@ export default function HomePage() {
 						) : (
 							<div className="w-full aspect-[4/5] border border-dashed border-gray-300 rounded-md flex items-center justify-center">
 								<span className="text-xs text-gray-400 text-center px-6">
-									Hero image placeholder — transparent PNG, no background
+									Hero image
 								</span>
 							</div>
 						)}
@@ -114,7 +95,7 @@ export default function HomePage() {
 			<section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 border-b border-gray-200">
 				<div className="mb-6">
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-						How we work
+						How ordering works
 					</h2>
 					<Link href="/about" className="text-sm text-navy hover:underline">
 						Learn more →
@@ -128,32 +109,32 @@ export default function HomePage() {
 					<Step
 						icon={FileText}
 						n="1"
-						title="Send an enquiry"
-						body="Fill the form with your specification and quantity."
+						title="Send an RFQ"
+						body="filling the form with your requirement and contact details."
 					/>
 					<Step
 						icon={Search}
 						n="2"
 						title="We verify"
-						body="We check the enquiry and follow up if we need more details."
+						body="your requirement and follow up if we need more details."
 					/>
 					<Step
 						icon={FileCheck}
 						n="3"
 						title="We quote"
-						body="A complete techno-commercial offer, with lead time."
+						body="A complete techno-commercial offer with lead time."
 					/>
 					<Step
 						icon={Handshake}
 						n="4"
 						title="You confirm"
-						body="Finalise the order and make payment once satisfied."
+						body="the order and make payment as per the agreed terms."
 					/>
 					<Step
 						icon={Ship}
 						n="5"
 						title="We ship"
-						body="By sea or air, depending on weight, urgency and your requirement."
+						body="the goods by sea or air, depending on weight and urgency."
 					/>
 				</ol>
 			</section>

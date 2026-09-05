@@ -38,8 +38,7 @@ export default function RootLayout({ children }) {
 					}}
 				/>
 			</head>
-			<body
-				className={`${inter.variable} ${robotoMono.variable} font-sans antialiased`}>
+			<body className={`${inter.variable} ${robotoMono.variable} font-sans`}>
 				<GoogleAnalytics />
 				<Header />
 				<main>{children}</main>

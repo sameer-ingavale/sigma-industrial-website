@@ -60,11 +60,11 @@ export default function ContactPage() {
 			</div>
 
 			<div className="lg:col-span-2 border border-gray-200 rounded-md p-6">
-				<h2 className="font-semibold text-gray-900 mb-2">
+				<h2 className="font-semibold text-gray-900 mb-2 text-lg">
 					Send us your requirement
 				</h2>
 				<p className="text-gray-700 mb-4 max-w-xl text-base">
-					You can also send your complete RFQ via email.
+					We usually get back within 1-2 business days
 				</p>
 				<EnquiryForm />
 			</div>

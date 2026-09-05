@@ -19,9 +19,9 @@ export default function ProductsPage() {
 						Product Catalog
 					</h1>
 					<p className="text-gray-700 mt-2 max-w-xl">
-						This catalogue is a reference point, not a complete list of what we
+						This catalog is a reference point, not a complete list of what we
 						can supply. Not in the catalog? Send us the part number, photo,
-						nameplate or equipment details—we&apos;ll take it from there.
+						nameplate or equipment details. We&apos;ll take it from there.
 					</p>
 				</div>
 			</section>

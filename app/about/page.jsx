@@ -124,7 +124,7 @@ export default function AboutPage() {
 
 				<div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
-						Beyond standard sourcing
+						Why choose us
 					</h2>
 					<p className="text-gray-700 leading-relaxed mb-4">
 						Some requirements take more than a catalogue search. We help
@@ -257,8 +257,8 @@ export default function AboutPage() {
 						Export documentation
 					</h2>
 					<p className="text-gray-700 mb-4">
-						Our GST registration, Import Export Code, RCMC and LUT are available
-						for verification.
+						Our GST Certificate, Import Export Code, and RCMC are available for
+						verification.
 					</p>
 					<ComplianceLinks docs={siteConfig.compliance} size="md" />
 				</div>

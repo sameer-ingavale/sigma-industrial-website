@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 import { assetUrl } from "@/lib/assets";
 
 export const metadata = {
-	title: "All Brands",
+	title: "Brands",
 	description: "OEM brands and verified Indian manufacturers we source from.",
 };
 
@@ -25,11 +25,13 @@ export default function BrandsPage() {
 		<>
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-10">
-					<h1 className="text-2xl font-semibold text-gray-900">All Brands</h1>
+					<h1 className="text-2xl font-semibold text-gray-900">
+						Selected Brands
+					</h1>
 					<p className="text-gray-700 mt-2 max-w-xl">
-						We source Indian &amp; International OEM brands and screened Indian
-						manufacturers. Not listed? Send us the OEM part number, model number
-						or technical specification—we&apos;ll take it from there.
+						We source from renowned OEM brands and screened Indian
+						manufacturers. Send us the OEM part number, model number or
+						technical specifications. We&apos;ll take it from there.
 					</p>
 				</div>
 			</section>

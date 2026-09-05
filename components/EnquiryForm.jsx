@@ -62,8 +62,7 @@ export default function EnquiryForm({ productName, productSlug }) {
 	if (status === "success") {
 		return (
 			<p className="text-gray-700 border border-gray-200 rounded-md bg-gray-50 p-4">
-				Message sent{productName ? ` for ${productName}` : ""}. We reply by
-				email, usually within 1–2 business days.
+				Message sent{productName ? ` for ${productName}` : ""}.
 			</p>
 		);
 	}
@@ -88,9 +87,7 @@ export default function EnquiryForm({ productName, productSlug }) {
 						value={category}
 						onChange={(e) => setCategory(e.target.value)}
 						className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-navy outline-none bg-white">
-						<option value="" disabled>
-							Select one…
-						</option>
+						<option value="" disabled></option>
 						{categories.map((cat) => (
 							<option key={cat.slug} value={cat.name}>
 								{cat.name}
@@ -123,10 +120,8 @@ export default function EnquiryForm({ productName, productSlug }) {
 						name="country"
 						required
 						defaultValue=""
-						className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-navy outline-none bg-white">
-						<option value="" disabled>
-							Select one…
-						</option>
+						className="w-full border border-gray-300 rounded-md px-2 py-2 focus:border-navy outline-none bg-white">
+						<option value="" disabled></option>
 						<optgroup label="Top countries">
 							{countries.top.map((c) => (
 								<option key={c} value={c}>
@@ -160,7 +155,7 @@ export default function EnquiryForm({ productName, productSlug }) {
 							<label
 								htmlFor="timeline"
 								className="block text-sm text-gray-700 mb-1">
-								Required Delivery Timeline *
+								Required Delivery Timeline
 							</label>
 							<select
 								id="timeline"
@@ -168,9 +163,7 @@ export default function EnquiryForm({ productName, productSlug }) {
 								required
 								defaultValue=""
 								className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-navy outline-none bg-white">
-								<option value="" disabled>
-									Select one…
-								</option>
+								<option value="" disabled></option>
 								{timelineOptions.map((t) => (
 									<option key={t} value={t}>
 										{t}
@@ -186,10 +179,9 @@ export default function EnquiryForm({ productName, productSlug }) {
 				<label
 					htmlFor="specifications"
 					className="block text-sm text-gray-700 mb-1">
-					{showCategorySelect ? "Details" : "Specifications / notes"}
+					{showCategorySelect ? "Details" : "Details"}
 				</label>
 				<textarea
-					placeholder="Part number, make/model, specifications, or any other information available."
 					id="specifications"
 					name="specifications"
 					rows={3}
@@ -225,7 +217,7 @@ function Field({ label, name, type = "text", required = false }) {
 				name={name}
 				type={type}
 				required={required}
-				className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-navy outline-none"
+				className="w-full border border-gray-300 rounded-md px-2 py-1.5 outline-none"
 			/>
 		</div>
 	);

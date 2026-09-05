@@ -68,10 +68,10 @@ export async function POST(req) {
     `;
 
 		await resend.emails.send({
-			/* 	from: `Sigma Industrial Enquiries <enquiries@${new URL(siteConfig.url).hostname}>`, */
-			from: "onboarding@resend.dev",
-			to: toEmail,
-			reply_to: email,
+			from: "Sigma Industrial Solutions <contact@sigmaindustrial.in>",
+			to: ["sameer@hitechcs.co.in"],
+			cc: [email], // customer's email from the enquiry form
+			replyTo: "contact@sigmaindustrial.in",
 			subject,
 			html,
 		});
