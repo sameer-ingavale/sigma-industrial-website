@@ -8,11 +8,11 @@ import { shareMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { assetUrl } from "@/lib/assets";
 import ShareButtons from "@/components/ShareButtons";
-
+import ReadingProgress from "@/components/ReadingProgress";
+import ArticleContents from "@/components/ArticleContents";
 export function generateStaticParams() {
 	return getAllPosts().map((p) => ({ slug: p.slug }));
 }
-
 export function generateMetadata({ params }) {
 	const post = getPostBySlug(params.slug);
 	if (!post) return {};
@@ -23,11 +23,9 @@ export function generateMetadata({ params }) {
 		image: post.image,
 	});
 }
-
 export default function BlogPostPage({ params }) {
 	const post = getPostBySlug(params.slug);
 	if (!post) notFound();
-
 	const category = getBlogCategoryBySlug(post.category);
 	const pageUrl = `${siteConfig.url}/blog/${post.slug}`;
 	const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
@@ -35,108 +33,89 @@ export default function BlogPostPage({ params }) {
 		month: "long",
 		day: "numeric",
 	});
-
 	return (
 		<article>
-			<div className="mx-auto max-w-3xl px-5 sm:px-8 py-10">
-				<Link href="/blog" className="text-xs text-gray-500 hover:text-navy">
-					← Blog
-				</Link>
-
-				<div className="flex items-start justify-between gap-4 mt-4">
-					<div>
-						<div className="flex items-center gap-3 text-sm text-gray-500">
-							{category && (
-								<span className="text-navy font-medium">{category.label}</span>
-							)}
-							<span>{formattedDate}</span>
+			{" "}
+			<ReadingProgress /> {/* ARTICLE HEADER */}{" "}
+			<header className="border-b border-gray-200">
+				{" "}
+				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-10 lg:py-12">
+					{" "}
+					{/* Breadcrumb */}{" "}
+					<div className="flex items-center gap-2 text-xs text-gray-500">
+						{" "}
+						<Link href="/blog" className="hover:text-navy transition-colors">
+							{" "}
+							Blog{" "}
+						</Link>{" "}
+						<span className="text-gray-300">/</span>{" "}
+						{category && (
+							<span className="text-gray-500">{category.label}</span>
+						)}{" "}
+					</div>{" "}
+					{/* Reading time + date */}{" "}
+					<div className="flex items-center gap-3 mt-7 text-xs text-gray-600 uppercase">
+						{" "}
+						{post.readTime && <span>{post.readTime} min read</span>}{" "}
+						{post.readTime && <span className="text-gray-300">·</span>}{" "}
+						<span>Published {formattedDate}</span>{" "}
+					</div>{" "}
+					{/* Title */}{" "}
+					<h1 className=" max-w-6xl mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-gray-900 ">
+						{" "}
+						{post.title}{" "}
+					</h1>{" "}
+					{/* Description / Excerpt */}{" "}
+					{post.excerpt && (
+						<p className="max-w-3xl mt-4 text-base sm:text-lg leading-relaxed text-gray-700">
+							{" "}
+							{post.excerpt}{" "}
+						</p>
+					)}{" "}
+					{/* Author + Share */}{" "}
+					<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 mt-7">
+						{" "}
+						<div className="text-sm text-gray-600">
+							{" "}
+							<span>By </span>{" "}
+							<span className="font-medium text-gray-900">
+								{" "}
+								{post.author}{" "}
+							</span>{" "}
+						</div>{" "}
+						<ShareButtons url={pageUrl} title={post.title} />{" "}
+					</div>{" "}
+					{/* Hero Image */}{" "}
+					{post.image && (
+						<div className="relative w-full aspect-[16/8] mt-9 bg-gray-100 overflow-hidden">
+							{" "}
+							<Image
+								src={assetUrl(post.image)}
+								alt={post.title}
+								fill
+								sizes="100vw"
+								className="object-cover rounded-md"
+								priority
+							/>{" "}
 						</div>
-						<h1 className="text-3xl font-bold text-gray-900 mt-2 leading-tight">
-							{post.title}
-						</h1>
-					</div>
-					<ShareButtons url={pageUrl} title={post.title} />
-				</div>
-				{post.image && (
-					<div className="relative w-full aspect-[21/9] bg-gray-50 mt-6">
-						<Image
-							src={assetUrl(post.image)}
-							alt={post.title}
-							fill
-							sizes="100vw"
-							className="object-cover rounded-md"
-							priority
-						/>
-					</div>
-				)}
-
-				{/* @tailwindcss/typography styles every element the MDX body
-            produces (headings, lists, blockquotes, links) without hand
-            styling each one — see tailwind.config.js plugins. */}
-				{/* <div className="prose prose-slate prose-headings:font-semibold prose-a:text-navy max-w-none mt-8 prose-p:text-lg">
-					<MDXRemote source={post.content} />
-				</div> */}
-				<div
-					className="
-		prose prose-slate max-w-none mt-8
-
-		prose-p:font-serif
-		prose-p:text-[20px]
-		prose-p:leading-[1.75]
-		prose-p:text-slate-700
-
-
-		prose-headings:font-sans
-		prose-headings:font-semibold
-		prose-headings:text-slate-900
-		prose-h2:text-[28px]
-		prose-h2:leading-[1.3]
-		prose-h2:mt-14
-		prose-h2:mb-5
-		prose-h3:text-[22px]
-		prose-h3:leading-[1.4]
-		prose-h3:mt-10
-		prose-h3:mb-4
-
-
-		prose-a:font-serif
-		prose-a:text-navy
-		prose-a:no-underline
-		hover:prose-a:underline
-
-
-		prose-li:font-serif
-		prose-li:text-[19px]
-		prose-li:leading-[1.75]
-		prose-li:text-slate-700
-
-
-		prose-strong:font-semibold
-		prose-strong:text-slate-900
-
-
-		prose-blockquote:font-serif
-		prose-blockquote:text-[21px]
-		prose-blockquote:leading-[1.6]
-		prose-blockquote:text-slate-600
-		prose-blockquote:border-l-2
-		prose-blockquote:border-slate-300
-
-
-		prose-img:rounded-lg
-
-
-		prose-code:font-mono
-		prose-code:text-[15px]
-		prose-code:before:content-none
-		prose-code:after:content-none
-
-
-		prose-hr:border-slate-200
-	">
-					<MDXRemote source={post.content} />
-				</div>
-			</div>
+					)}{" "}
+				</div>{" "}
+			</header>{" "}
+			{/* ARTICLE BODY */}{" "}
+			<div className="mx-auto max-w-6xl px-5 sm:px-8 pt-12 pb-20">
+				{" "}
+				<div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)] gap-x-12 justify-center">
+					{" "}
+					{/* Contents */} <ArticleContents /> {/* Reading Column */}{" "}
+					<div className="article-content">
+						{" "}
+						<div className=" prose prose-gray max-w-none prose-p:font-serif prose-p:text-[19px] prose-p:leading-[1.75] prose-p:text-gray-800 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-gray-900 prose-h2:text-[28px] prose-h2:leading-[1.35] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[22px] prose-h3:leading-[1.4] prose-h3:mt-9 prose-h3:mb-4 prose-a:font-serif prose-a:text-navy prose-a:no-underline hover:prose-a:underline prose-li:font-serif prose-li:text-[18px] prose-li:leading-[1.75] prose-li:text-gray-700 prose-strong:font-semibold prose-strong:text-gray-900 prose-blockquote:font-serif prose-blockquote:text-[20px] prose-blockquote:leading-[1.6] prose-blockquote:text-gray-600 prose-blockquote:border-l-2 prose-blockquote:border-gray-300 prose-img:rounded-md prose-code:font-mono prose-code:text-[15px] prose-code:before:content-none prose-code:after:content-none prose-hr:border-gray-200 prose-headings:scroll-mt-24 ">
+							{" "}
+							<MDXRemote source={post.content} />{" "}
+						</div>{" "}
+					</div>{" "}
+				</div>{" "}
+			</div>{" "}
 		</article>
 	);
 }

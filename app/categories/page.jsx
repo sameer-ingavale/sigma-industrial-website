@@ -13,10 +13,10 @@ export default function CategoriesPage() {
 		<>
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-10">
-					<h1 className="text-2xl font-semibold text-gray-900">
+					<h1 className="text-3xl font-bold text-gray-900 tracking-tight">
 						Selected Categories
 					</h1>
-					<p className="text-gray-700 mt-2 max-w-xl">
+					<p className="text-gray-700 mt-2 max-w-xl text-lg leading-[1.55]">
 						These are not exhaustive. We also work with requirements outside
 						these categories. Send us the part number, photo, nameplate or
 						equipment details. We&apos;ll take it from there.

@@ -121,7 +121,7 @@ export default function ProductPage({ params }) {
 						<StatusBadge status={product.status} />
 						<ShareButtons url={pageUrl} title={product.name} />
 					</div>
-					<h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mt-2">
+					<h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 tracking-tight">
 						{product.name}
 					</h1>
 					<p className="text-gray-700 mt-2">{product.application}</p>
@@ -324,12 +324,21 @@ export default function ProductPage({ params }) {
 							<div className="divide-y border-y">
 								{product.faqs.map((faq) => (
 									<details key={faq.question} className="group py-4">
-										<summary className="flex items-center justify-between cursor-pointer font-medium text-gray-800 list-none">
+										<summary
+											className="
+						flex items-center justify-between
+						cursor-pointer
+						font-medium text-gray-800
+						list-none
+						[&::-webkit-details-marker]:hidden
+					">
 											{faq.question}
+
 											<span className="font-normal ml-4 text-gray-500 group-open:rotate-45 transition-transform">
 												+
 											</span>
 										</summary>
+
 										<p className="text-gray-700 mt-3">{faq.answer}</p>
 									</details>
 								))}

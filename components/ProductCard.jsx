@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
 				<p className="text-xs text-gray-500 uppercase tracking-wide">
 					{category?.name}
 				</p>
-				<h3 className="font-medium text-gray-900 mt-1">{product.name}</h3>
+				<h3 className="font-semibold text-gray-900 mt-1">{product.name}</h3>
 				<p className="text-gray-700 mt-1">{product.application}</p>
 				{product.indicativePrice && (
 					<p className="font-semibold text-navy mt-2">

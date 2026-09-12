@@ -25,10 +25,10 @@ export default function BrandsPage() {
 		<>
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-10">
-					<h1 className="text-2xl font-semibold text-gray-900">
+					<h1 className="text-3xl font-bold text-gray-900 tracking-tight">
 						Selected Brands
 					</h1>
-					<p className="text-gray-700 mt-2 max-w-xl">
+					<p className="text-gray-700 mt-2 max-w-xl text-lg leading-[1.55]">
 						We source from renowned OEM brands and screened Indian
 						manufacturers. Send us the OEM part number, model number or
 						technical specifications. We&apos;ll take it from there.
@@ -67,11 +67,11 @@ export default function BrandsPage() {
 								<Image
 									src={assetUrl(siteConfig.sigmaVerifiedBanner)}
 									alt="Sigma Verified Manufacturers"
-									width={300}
-									height={100}
-									/* fill */
-									/* sizes="100vw" */
-									/* 	className="object-cover" */
+									/* width={300}
+									height={100} */
+									fill
+									sizes="100vw"
+									className="object-cover"
 								/>
 							) : (
 								<span className="absolute inset-0 flex items-center justify-center text-xs text-gray-400 text-center px-6">

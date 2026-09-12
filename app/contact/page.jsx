@@ -36,8 +36,11 @@ export default function ContactPage() {
 					</a>
 				</Detail>
 				<Detail label="Office">
-					{siteConfig.location.addressLocality},{" "}
-					{siteConfig.location.addressRegion}, India
+					{siteConfig.location.streetAddress},{" "}
+					{siteConfig.location.addressLocality}
+					<br />
+					{siteConfig.location.addressRegion} {siteConfig.location.postalCode},
+					India
 				</Detail>
 
 				{/* A photo of the office or the person answering enquiries — see

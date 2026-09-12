@@ -22,15 +22,14 @@ export default function HomePage() {
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 flex flex-col lg:flex-row items-center gap-10">
 					<div className="flex-1 py-14">
-						<h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 max-w-2xl">
+						<h1 className="text-3xl lg:text-4xl font-bold text-gray-900 max-w-2xl tracking-tight">
 							Industrial equipment and spares, sourced in India, shipped
 							worldwide
 						</h1>
 
-						<p className="text-gray-700 mt-4 max-w-xl">
-							Supplying OEM parts, quality equivalents, and hard-to-source
-							industrial requirements to manufacturing and industrial buyers
-							since 2007
+						<p className="text-gray-700 mt-4 max-w-xl text-lg">
+							Supplying OEM parts, equivalents, and hard-to-source industrial
+							requirements to manufacturing and industrial buyers since 2007
 						</p>
 
 						<div className="flex gap-3 mt-8">
@@ -75,10 +74,10 @@ export default function HomePage() {
 				<div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
 					{siteConfig.stats.map((stat) => (
 						<div key={stat.label}>
-							<p className="text-2xl sm:text-3xl font-semibold text-navy">
+							<p className="text-2xl sm:text-3xl font-bold text-navy tracking-tight">
 								{stat.value}
 							</p>
-							<p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+							<p className="text-base text-gray-500 mt-1">{stat.label}</p>
 						</div>
 					))}
 				</div>
@@ -184,14 +183,18 @@ function Step({ icon: Icon, n, title, body }) {
 	return (
 		<li>
 			<div className="flex items-center gap-2.5">
-				<span className="text-3xl font-bold text-navy leading-none">{n}</span>
+				<span className="text-3xl font-bold text-navy leading-none tracking-tight">
+					{n}
+				</span>
 				<Icon
 					className="w-6 h-6 text-navy/90 flex-shrink-0"
 					strokeWidth={2}
 					aria-hidden="true"
 				/>
 			</div>
-			<p className="font-semibold text-accent mt-3">{title}</p>
+			<p className="font-bold text-accent mt-3 text-lg tracking-tight">
+				{title}
+			</p>
 			<p className="text-gray-700 mt-1">{body}</p>
 		</li>
 	);

@@ -11,7 +11,7 @@ export default function Header() {
 						src={`/images/sigma-logo.png`}
 						alt="logo"
 						title="logo"
-						width={75}
+						width={80}
 						height={50}
 						className="rounded-sm mt-0.5"
 					/>

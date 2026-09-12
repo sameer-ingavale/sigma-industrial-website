@@ -54,9 +54,10 @@ export default function AboutPage() {
 
 			<section>
 				<div className="mx-auto max-w-3xl px-5 sm:px-8 pt-14 pb-11">
-					<h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mt-1">
+					<h1 className=" max-w-3xl mt-1 text-3xl lg:text-4xl font-bold tracking-tight leading-[1.05] text-gray-900 ">
+						{" "}
 						Your engineering-led sourcing partner, offering rigorous quality
-						assurance
+						assurance{" "}
 					</h1>
 					<p className="text-gray-700 text-lg mt-3">
 						Sigma Industrial Solutions is the sister concern of{" "}
