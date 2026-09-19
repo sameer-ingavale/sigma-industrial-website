@@ -61,7 +61,7 @@ export default function BlogPostPage({ params }) {
 						<span>Published {formattedDate}</span>{" "}
 					</div>{" "}
 					{/* Title */}{" "}
-					<h1 className=" max-w-6xl mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-gray-900 ">
+					<h1 className=" max-w-6xl mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-gray-900">
 						{" "}
 						{post.title}{" "}
 					</h1>{" "}

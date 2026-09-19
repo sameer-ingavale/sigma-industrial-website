@@ -29,8 +29,8 @@ export default function BlogPage({ searchParams }) {
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 py-12 lg:py-14">
 					<div className="max-w-2xl">
-						<h1 className="text-3xl sm:text-4xl font-semibold text-gray-900">
-							Practical insights for industrial buyers.
+						<h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+							Practical insights for industrial buyers
 						</h1>
 
 						<p className="max-w-xl mt-4 text-gray-700">

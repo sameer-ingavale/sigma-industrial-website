@@ -51,7 +51,7 @@ export default function CategoryTiles({ categories, variant = "compact" }) {
 								className={
 									large
 										? "text-base font-medium text-gray-900"
-										: "text-sm font-medium text-gray-800"
+										: "text-base font-medium text-gray-800"
 								}>
 								{cat.name}
 							</span>
