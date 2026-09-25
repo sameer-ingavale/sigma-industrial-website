@@ -25,3 +25,18 @@ body {
 		transition-duration: 0.01ms !important;
 	}
 }
+
+@keyframes industry-marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.industry-marquee {
+	animation: industry-marquee 40s linear infinite;
+	will-change: transform;
+}

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { FileText, Search, FileCheck, Handshake, Ship } from "lucide-react";
 import CategoryTiles from "@/components/CategoryTiles";
 import ClientLogos from "@/components/ClientLogos";
+import CountryTicker from "@/components/CountryTicker";
+import IndustryMarquee from "@/components/IndustryMarquee";
 import { categories } from "@/lib/products";
 import { clients } from "@/lib/clients";
 import { reviews } from "@/lib/reviews";
@@ -22,14 +24,22 @@ export default function HomePage() {
 			<section className="border-b border-gray-200">
 				<div className="mx-auto max-w-6xl px-5 sm:px-8 flex flex-col lg:flex-row items-center gap-10">
 					<div className="flex-1 py-14">
+						{/* <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 max-w-2xl tracking-tight leading-6">
+							Industrial equipment and spares, sourced in India, shipped{" "}
+							<CountryTicker />
+						</h1> */}
 						<h1 className="text-3xl lg:text-4xl font-bold text-gray-900 max-w-2xl tracking-tight">
-							Industrial equipment and spares, sourced in India, shipped
-							worldwide
+							<span className="block leading-[1.2]">
+								Industrial equipment and spares, sourced in India, shipped to
+							</span>
+							<span className="block leading-[1.2]">
+								<CountryTicker />
+							</span>
 						</h1>
 
 						<p className="text-gray-700 mt-4 max-w-xl text-lg">
-							Supplying OEM parts, equivalents, and hard-to-source industrial
-							requirements to manufacturing and industrial buyers since 2007
+							Supplying OEM spares, equivalents, and hard-to-source requirements
+							to industrial buyers since 2007
 						</p>
 
 						<div className="flex gap-3 mt-8">
@@ -67,6 +77,8 @@ export default function HomePage() {
 				</div>
 			</section>
 
+			<IndustryMarquee />
+
 			{/* Trust: stats + client logos. Stats are edited by hand in
           lib/site-config.js — keep them accurate. Client logos are in
           lib/clients.js; only list a client once you have permission. */}
@@ -93,7 +105,7 @@ export default function HomePage() {
           not pulled from a data file, since it changes rarely. */}
 			<section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 border-b border-gray-200">
 				<div className="mb-6">
-					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-1">
+					<h2 className="text-sm text-gray-700 uppercase tracking-wide mb-1">
 						How ordering works
 					</h2>
 					<Link href="/about" className="text-sm text-navy hover:underline">
