@@ -33,10 +33,9 @@ export default function BlogPage({ searchParams }) {
 							Practical insights for industrial buyers
 						</h1>
 
-						<p className="max-w-xl mt-4 text-gray-700">
-							Insights on industrial sourcing, manufacturing, engineering and
-							exporting from India, based on real requirements and supply
-							experience.
+						<p className="text-gray-700 mt-4 max-w-xl text-lg leading-[1.55]">
+							Insights on sourcing, manufacturing, engineering and exporting
+							from India, based on real requirements and experience.
 						</p>
 					</div>
 				</div>

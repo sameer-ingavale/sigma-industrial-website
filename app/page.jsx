@@ -28,12 +28,12 @@ export default function HomePage() {
 							Industrial equipment and spares, sourced in India, shipped{" "}
 							<CountryTicker />
 						</h1> */}
-						<h1 className="text-3xl lg:text-4xl font-bold text-gray-900 max-w-2xl tracking-tight">
-							<span className="block leading-[1.2]">
-								Industrial equipment and spares, sourced in India, shipped to
-							</span>
-							<span className="block leading-[1.2]">
-								<CountryTicker />
+						<h1 className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">
+							<span className="leading-[1.2]">
+								Industrial equipment and spares, sourced in India, shipped to{" "}
+								<span className="inline lg:block">
+									<CountryTicker />
+								</span>
 							</span>
 						</h1>
 

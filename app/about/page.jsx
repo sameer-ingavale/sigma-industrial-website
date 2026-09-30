@@ -69,7 +69,7 @@ export default function AboutPage() {
 							{siteConfig.sisterConcern.name}
 						</a>
 						, building on more than {siteConfig.yearsInExport} years of
-						industrial export experience from India.
+						industrial export experience from India
 					</p>
 				</div>
 			</section>

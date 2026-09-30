@@ -170,11 +170,11 @@ export default function Footer() {
 								Terms of Use
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href="/shipping" className="hover:text-white">
 								Shipping &amp; Delivery
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/disclaimer" className="hover:text-white">
 								Disclaimer
