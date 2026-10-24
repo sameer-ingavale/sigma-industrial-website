@@ -102,17 +102,20 @@ export default function BlogPostPage({ params }) {
 				</div>{" "}
 			</header>{" "}
 			{/* ARTICLE BODY */}{" "}
-			<div className="mx-auto max-w-6xl px-5 sm:px-8 pt-12 pb-20">
+			<div className="mx-auto max-w-6xl px-5 sm:px-8 pt-12 pb-20 ">
 				{" "}
-				<div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)] gap-x-12 justify-center">
+				<div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)] gap-x-16 justify-center">
 					{" "}
 					{/* Contents */} <ArticleContents /> {/* Reading Column */}{" "}
 					<div className="article-content">
 						{" "}
-						<div className=" prose prose-gray max-w-none prose-p:font-serif prose-p:text-[19px] prose-p:leading-[1.75] prose-p:text-gray-800 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-gray-900 prose-h2:text-[28px] prose-h2:leading-[1.35] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[22px] prose-h3:leading-[1.4] prose-h3:mt-9 prose-h3:mb-4 prose-a:font-serif prose-a:text-navy prose-a:no-underline hover:prose-a:underline prose-li:font-serif prose-li:text-[18px] prose-li:leading-[1.75] prose-li:text-gray-700 prose-strong:font-semibold prose-strong:text-gray-900 prose-blockquote:font-serif prose-blockquote:text-[20px] prose-blockquote:leading-[1.6] prose-blockquote:text-gray-600 prose-blockquote:border-l-2 prose-blockquote:border-gray-300 prose-img:rounded-md prose-code:font-mono prose-code:text-[15px] prose-code:before:content-none prose-code:after:content-none prose-hr:border-gray-200 prose-headings:scroll-mt-24 ">
+						{/* 	<div className=" prose prose-gray max-w-none prose-p:font-serif prose-p:text-[19px] prose-p:leading-[1.75] prose-p:text-gray-800 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-gray-900 prose-h2:text-[28px] prose-h2:leading-[1.35] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[22px] prose-h3:leading-[1.4] prose-h3:mt-9 prose-h3:mb-4 prose-a:font-serif prose-a:text-navy prose-a:no-underline hover:prose-a:underline prose-li:font-serif prose-li:text-[18px] prose-li:leading-[1.75] prose-li:text-gray-700 prose-strong:font-semibold prose-strong:text-gray-900 prose-blockquote:font-serif prose-blockquote:text-[20px] prose-blockquote:leading-[1.6] prose-blockquote:text-gray-600 prose-blockquote:border-l-2 prose-blockquote:border-gray-300 prose-img:rounded-md prose-code:font-mono prose-code:text-[15px] prose-code:before:content-none prose-code:after:content-none prose-hr:border-gray-200 prose-headings:scroll-mt-24 ">
 							{" "}
 							<MDXRemote source={post.content} />{" "}
-						</div>{" "}
+						</div>{" "} */}
+						<div className="prose prose-gray max-w-none prose-p:font-serif prose-p:text-[20px] prose-p:leading-[1.75] prose-p:text-gray-800 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-gray-900 prose-h2:text-[28px] prose-h2:leading-[1.35] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[22px] prose-h3:leading-[1.4] prose-h3:mt-9 prose-h3:mb-4 prose-a:font-serif prose-a:underline prose-a:decoration-dotted prose-a:decoration-gray-400 prose-a:underline-offset-4 prose-a:opacity-80 prose-a:transition-opacity prose-a:duration-200 hover:prose-a:opacity-100 prose-li:font-serif prose-li:text-[18px] prose-li:leading-[1.75] prose-li:text-gray-700 prose-strong:font-semibold prose-strong:text-gray-900 prose-blockquote:font-serif prose-blockquote:text-[20px] prose-blockquote:leading-[1.6] prose-blockquote:text-gray-600 prose-blockquote:border-l-2 prose-blockquote:border-gray-300 prose-img:rounded-md prose-code:font-mono prose-code:text-[15px] prose-code:before:content-none prose-code:after:content-none prose-hr:border-gray-200 prose-headings:scroll-mt-24">
+							<MDXRemote source={post.content} />
+						</div>
 					</div>{" "}
 				</div>{" "}
 			</div>{" "}
