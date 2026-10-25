@@ -60,7 +60,10 @@ export default function AboutPage() {
 						assurance{" "}
 					</h1>
 					<p className="text-gray-700 text-lg mt-3">
-						Sigma Industrial Solutions is the sister concern of{" "}
+						Sigma acts as your on-the-ground engineering team in India. From
+						vetting suppliers to handling 100% of the export logistics, we make
+						buying from India as reliable as buying locally.
+						{/* Sigma Industrial Solutions is the sister concern of{" "}
 						<a
 							href={siteConfig.sisterConcern.url}
 							target="_blank"
@@ -69,7 +72,7 @@ export default function AboutPage() {
 							{siteConfig.sisterConcern.name}
 						</a>
 						, building on more than {siteConfig.yearsInExport} years of
-						industrial export experience from India
+						industrial export experience from India */}
 					</p>
 				</div>
 			</section>
@@ -125,7 +128,7 @@ export default function AboutPage() {
 
 				<div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
-						Why choose us
+						Why work with us
 					</h2>
 					<p className="text-gray-700 leading-relaxed mb-4">
 						Some requirements take more than a catalogue search. We help
@@ -224,14 +227,13 @@ export default function AboutPage() {
 						What &ldquo;Sigma Verified Manufacturer&rdquo; means
 					</h2>
 					<p className="text-gray-700 leading-relaxed">
-						Some products on this site list a brand as &ldquo;Sigma Verified
-						Manufacturer&rdquo; instead of a name. These aren&apos;t large,
-						globally known brands, they&apos;re mid-sized Indian manufacturers,
-						often second or third-generation, who&apos;ve mastered one product
-						category. We&apos;ve personally visited each one&apos;s
-						manufacturing floor and screened them on quality, reliability,
-						compliance, and cost-effectiveness before presenting & supplying
-						their products to a client.
+						Some products on this site list the brand as &ldquo;Sigma Verified
+						Manufacturer&rdquo;. These aren&apos;t large, globally known brands,
+						they&apos;re mid-sized Indian manufacturers, often second or
+						third-generation, who&apos;ve mastered one product category.
+						We&apos;ve personally visited each one&apos;s manufacturing floor
+						and screened them on quality, reliability, compliance, and
+						cost-effectiveness before supplying their products to a client.
 					</p>
 				</div>
 
@@ -266,7 +268,7 @@ export default function AboutPage() {
 
 				<div className="flex gap-3">
 					<Link
-						href="/products"
+						href="/categories"
 						className="bg-navy text-white text-sm px-5 py-2.5 rounded-md hover:bg-navy/90">
 						View catalog
 					</Link>
