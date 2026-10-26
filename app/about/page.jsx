@@ -22,23 +22,23 @@ export const metadata = {
 const WHAT_WE_DO = [
 	{
 		icon: ClipboardCheck,
-		title: "Requirement Validation",
-		body: "We work from part numbers, specifications, photographs and other available information to establish what is actually required.",
+		title: "Hard-to-Source Requirements",
+		body: "Can't find an obsolete component or uncommon part number? We cross-reference multiple supply networks to source exact matches.",
 	},
 	{
 		icon: SearchCheck,
-		title: "Source Selection",
-		body: "We assess OEM, established aftermarket and alternative sources rather than assuming the first available supplier is the right one.",
+		title: "OEM & Alternate Sourcing",
+		body: "We give you options. Choose original OEM components or vetted equivalent alternatives with complete techno-commercial transparency.",
 	},
 	{
 		icon: FileCheck2,
-		title: "Commercial Clarity",
-		body: "We issue formal techno-commercial quotations with the make, specifications, lead time, origin and commercial terms clearly defined.",
+		title: "Multi-Requirement Consildation",
+		body: "Stop juggling 10 different suppliers. We consolidate your complex multi-category orders into one point of contact, one invoice, and one shipment.",
 	},
 	{
 		icon: PackageCheck,
-		title: "Execution & Delivery",
-		body: "Once confirmed, we coordinate procurement, packing, inspection, documentation, and international shipment through to delivery.",
+		title: "End-to-End Execution",
+		body: "From pre-shipment quality inspection and packaging to international freight and export documentation, we handle every detail.",
 	},
 ];
 
@@ -56,13 +56,13 @@ export default function AboutPage() {
 				<div className="mx-auto max-w-3xl px-5 sm:px-8 pt-14 pb-11">
 					<h1 className=" max-w-3xl mt-1 text-3xl lg:text-4xl font-bold tracking-tight leading-[1.05] text-gray-900 ">
 						{" "}
-						Your engineering-led sourcing partner, offering rigorous quality
-						assurance{" "}
+						Your On-Ground Engineering & Sourcing Partner in India since
+						2007{" "}
 					</h1>
 					<p className="text-gray-700 text-lg mt-3">
-						Sigma acts as your on-the-ground engineering team in India. From
-						vetting suppliers to handling 100% of the export logistics, we make
-						buying from India as reliable as buying locally.
+						We eliminate the friction, risk, and complexity of sourcing from
+						India, making international procurement as seamless and reliable as
+						buying locally
 						{/* Sigma Industrial Solutions is the sister concern of{" "}
 						<a
 							href={siteConfig.sisterConcern.url}
@@ -125,52 +125,66 @@ export default function AboutPage() {
             for a buyer who's been burned by an unreliable middleman
             before, so it's worth spelling out rather than assuming it
             comes across. */}
-
-				<div>
+				{/* <div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
-						Why work with us
+						Why buyers work with us
 					</h2>
 					<p className="text-gray-700 leading-relaxed mb-4">
-						Some requirements take more than a catalogue search. We help
-						procurement teams when the requirement is difficult to identify,
-						source, verify or deliver.
+						Finding specialized industrial parts globally can come with hidden
+						risks: unverified suppliers, misaligned specs, quality issues, and
+						export headaches.
 					</p>
+					<p>
+						As an engineering-led procurement partner, we vet manufacturers,
+						verify specifications, and oversee quality to deliver exactly what
+						you need, on time and on budget.
+					</p>
+					<br />
 					<ul className="space-y-4 text-gray-800">
 						<li>
 							<strong className="font-medium text-gray-900">
-								• Difficult-to-source requirements:
+								• Hard-to-Source Requirements:
 							</strong>{" "}
-							Obsolete, uncommon or locally unavailable components are
-							investigated against multiple sourcing channels.
+							Can't find an obsolete component or uncommon part number? We
+							cross-reference multiple supply networks to source exact matches.
 						</li>
 						<li>
 							<strong className="font-medium text-gray-900">
-								• OEM and equivalent sourcing:
+								• OEM & Alternate Sourcing:
 							</strong>{" "}
-							Where technically appropriate, we quote the specified OEM
-							requirement or present suitable equivalent options for comparison.
+							We give you options. Choose original OEM components or vetted
+							equivalent alternatives with complete techno-commercial
+							transparency.
 						</li>
 						<li>
 							<strong className="font-medium text-gray-900">
-								• Multi-brand sourcing:
+								• Multi-Requirement Consildation:
 							</strong>{" "}
-							Multiple requirements can be consolidated into a single sourcing
-							exercise, reducing the need to coordinate with multiple suppliers.
+							Stop juggling 10 different overseas suppliers. We consolidate your
+							complex multi-category orders into one point of contact, one
+							invoice, and one shipment.
 						</li>
 						<li>
 							<strong className="font-medium text-gray-900">
-								• Documentation & export coordination:
+								• End-to-End Execution:
 							</strong>{" "}
-							Commercial documentation, packing, certificates and international
-							freight are coordinated us as part of the supply process.
+							From pre-shipment quality inspection and packaging to
+							international freight and export documentation, we handle every
+							detail.
 						</li>
 					</ul>
-				</div>
-
+				</div> */}
 				<div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
-						From Requirement to Delivery
+						Why buyers work with us
 					</h2>
+					<p className="text-gray-700 leading-relaxed mb-6">
+						Procuring industrial products globally can come with hidden risks:
+						unverified suppliers, misaligned specs, quality issues, and export
+						headaches. As an engineering-led procurement partner, we verify
+						specifications and oversee quality to deliver exactly what you need,
+						on time and on budget.
+					</p>
 					<div className="grid grid-cols-1 gap-x-8 gap-y-6">
 						{WHAT_WE_DO.map(({ icon: Icon, title, body }) => (
 							<div key={title} className="flex gap-4">
@@ -189,7 +203,6 @@ export default function AboutPage() {
 						))}
 					</div>
 				</div>
-
 				<div className="flex flex-col sm:flex-row gap-6 items-stretch ">
 					<div className="relative w-full sm:w-48 aspect-[4/3] bg-gray-50 border border-gray-200 rounded-md overflow-hidden flex-shrink-0">
 						{siteConfig.founderImage ? (
@@ -211,7 +224,14 @@ export default function AboutPage() {
 							Who&apos;s behind this
 						</h2>
 						<p className="font-medium text-gray-900">
-							Sameer Ingavale, Founder
+							<a
+								href="https://www.linkedin.com/in/sameeringavale"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-navy transition-colors underline">
+								Sameer Ingavale
+							</a>
+							, Founder
 						</p>
 						<p className="text-gray-700 mt-2 leading-relaxed">
 							My focus at Sigma is to make India&apos;s fragmented industrial
@@ -221,7 +241,6 @@ export default function AboutPage() {
 						</p>
 					</div>
 				</div>
-
 				<div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
 						What &ldquo;Sigma Verified Manufacturer&rdquo; means
@@ -236,7 +255,6 @@ export default function AboutPage() {
 						cost-effectiveness before supplying their products to a client.
 					</p>
 				</div>
-
 				<div>
 					<h2 className="text-sm text-gray-500 uppercase tracking-wide mb-3">
 						Terms & Capabilities
@@ -251,7 +269,6 @@ export default function AboutPage() {
 						<Row label="Credit terms" value={siteConfig.shipping.creditTerms} />
 					</dl>
 				</div>
-
 				{/* The compliance documents get more room here than the
             low-key homepage version — this is the page someone visits
             specifically to check credentials. */}
@@ -265,7 +282,6 @@ export default function AboutPage() {
 					</p>
 					<ComplianceLinks docs={siteConfig.compliance} size="md" />
 				</div>
-
 				<div className="flex gap-3">
 					<Link
 						href="/categories"
